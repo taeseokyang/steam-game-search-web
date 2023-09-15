@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RecomBee.COM</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body style="background-color: rgb(238, 225, 208);">
+  <header>
+    <a href="#"><img src="images/logo.png" alt=""></a>
+    <h1 class="title"><a href="html.html">RECOM - - - BEE</a></h1>
+  </header>
+  <div class="box"></div>
+  <div id="main">
+    <div id="top">
+    </div>
+    <form name="form" METHOD="post" action="receive.php">
+      <fieldset id="f1" class="r1">
+        <!-- 기종 -->
+        <div>
+          <p class="title2">플렛폼</p>
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd1" value="Steem">
+            <span>스팀</span>
+          </label>
+        </div>
+        <label class="box-radio-input">
+          <input type="button" onclick="button();" name="next" value="next">
+          <span id="b1">NEXT</span>
+        </label>
+      </fieldset>
+      <fieldset style="display: none;" id="f2" class="r2">
+        <div>
+          <p class="title2">플레이 인원</p><!-- 국 -->
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd2" value="Singleplayer">
+            <span>싱글</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="radio" name="rd2" value="Multiplayer">
+            <span>멀티</span>
+          </label>
+        </div>
+        <label class="box-radio-input">
+          <input type="button" onclick="button();" name="next" value="next">
+          <span id="b2">NEXT</span>
+        </label>
+      </fieldset>
+      <fieldset style="display: none;" id="f3" class="r2">
+        <div>
+          <p class="title2">한국어</p><!-- 국 -->
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd3" value="Korean">
+            <span>지원</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="radio" name="rd3" value="All Languages">
+            <span>상관없음</span>
+          </label>
+        </div>
+        <label class="box-radio-input">
+          <input type="button" onclick="button();" name="next" value="next">
+          <span id="b3">NEXT</span>
+        </label>
+      </fieldset>
+      <fieldset style="display: none;" id="f4" class="r5">
+        <div>
+          <p class="title2">장르</p><!-- 국 -->
+          <label class="box-radio-input r2">
+            <input type="checkbox" name="rd4[]" value="Massively Multiplayer">
+            <span>대규모 멀티</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Racing">
+            <span>레이싱</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="RPG">
+            <span>롤플레잉</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Sports">
+            <span>스포츠</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Simulation">
+            <span>시뮬레이션</span>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label class="box-radio-input r2">
+            <input type="checkbox" name="rd4[]" value="Action">
+            <span>액션</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Adventure">
+            <span>어드벤쳐</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Indie">
+            <span>인디</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Strategy">
+            <span>전략</span>
+          </label>
+          <label class="box-radio-input">
+            <input type="checkbox" name="rd4[]" value="Casual">
+            <span>캐쥬얼</span>
+          </label>
+        </div>
+        <label class="box-radio-input">
+          <input type="button" onclick="button();" name="next" value="next">
+          <span id="b4">NEXT</span>
+        </label>
+      </fieldset>
+      <fieldset style="display: none;" id="f5" class="r3">
+        <div id='tags1'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Early Access>
+                <span>앞서 해보기 </span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=2D>
+                <span>2D </span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Violent>
+                <span>폭력</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Atmospheric>
+                <span>분위기 있는</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Puzzle>
+                <span>퍼즐</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Story Rich>
+                <span>풍부한 스토리</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Fantasy>
+                <span>판타지</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Gore>
+                <span>고어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Nudity>
+                <span>누드</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=3D>
+                <span>3D</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sexual Content>
+                <span>선정적인 내용</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Colorful>
+                <span>다채로운</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Anime>
+                <span>애니</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Pixel Graphics>
+                <span>픽셀 그래픽</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=First-Person>
+                <span>1인칭</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Funny>
+                <span>유머</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Great Soundtrack>
+                <span>웅장한 사운드트랙</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cute>
+                <span>귀여운</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Exploration>
+                <span>탐험</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sci-fi>
+                <span>공상과학</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Shooter>
+                <span>슈팅</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Arcade>
+                <span>아케이드</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Horror>
+                <span>공포</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Retro>
+                <span>복고풍</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags2' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Family Friendly>
+                <span>전체 이용가</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=VR>
+                <span>VR</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Co-op>
+                <span>협동</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Difficult>
+                <span>어려움</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Open World>
+                <span>오픈 월드</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Platformer>
+                <span>플랫폼 게임</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Survival>
+                <span>생존</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Relaxing>
+                <span>릴랙싱</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Action-Adventure>
+                <span>액션 어드벤처</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Female Protagonist>
+                <span>여주인공</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Comedy>
+                <span>코미디</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Third Person>
+                <span>3인칭</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=FPS>
+                <span>1인칭 슈팅</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Online Co-Op>
+                <span>온라인 협동</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Visual Novel>
+                <span>비주얼 노벨</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=PvP>
+                <span>PvP</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Stylized>
+                <span>양식화된</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Combat>
+                <span>전투</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Realistic>
+                <span>현실적</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Physics>
+                <span>물리게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Choices Matter>
+                <span>선택의 중요</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sandbox>
+                <span>샌드박스</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Top-Down>
+                <span>탑다운</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Design & Illustration>
+                <span>디자인과 일러스트레이션</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags3' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dark>
+                <span>어두운</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Utilities>
+                <span>유틸리티</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mystery>
+                <span>미스터리</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Character Customization>
+                <span>캐릭터 커스터마이즈</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Controller>
+                <span>컨트롤러</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Psychological Horror>
+                <span>심리적 공포</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cartoony>
+                <span>만화 같은</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tactical>
+                <span>작전</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Space>
+                <span>우주</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Turn-Based>
+                <span>턴제</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Local Multiplayer>
+                <span>로컬 멀티플레이어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Multiple Endings>
+                <span>복수 결말</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Building>
+                <span>건설</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Point & Click>
+                <span>포인트 앤드 클릭</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Minimalist>
+                <span>미니멀리스트</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Management>
+                <span>경영</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Old School>
+                <span>올드 스쿨</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Replay Value>
+                <span>리플레이 가치</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=2D Platformer>
+                <span>2D 플랫폼 개임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=PvE>
+                <span>PvE</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Education>
+                <span>교육</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Futuristic>
+                <span>초현대적</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Action RPG>
+                <span>액션 롤플레잉</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Crafting>
+                <span>크래프팅</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags4' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Magic>
+                <span>마법</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Side Scroller>
+                <span>사이드 스크롤러</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hand-drawn>
+                <span>손으로 그린</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Linear>
+                <span>리니어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Survival Horror>
+                <span>생존 공포</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mature>
+                <span>성인</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Procedural Generation>
+                <span>절차적인 작곡</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Puzzle Platformer>
+                <span>퍼즐 플랫폼 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Zombies>
+                <span>좀비</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Local Co-Op>
+                <span>로컬 협동</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Resource Management>
+                <span>자원관리</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cartoon>
+                <span>만화</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=War>
+                <span>전쟁</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Shoot 'Em Up>
+                <span>슛뎀업</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Medieval>
+                <span>중세</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Roguelike>
+                <span>로그라이크</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Turn-Based Strategy>
+                <span>턴제전략</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Memes>
+                <span>밈</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Classic>
+                <span>클래식</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hack and Slash>
+                <span>핵 앤 슬래시</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Turn-Based Combat>
+                <span>턴제 전투</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dark Fantasy>
+                <span>다크 판타지</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Fast-Paced>
+                <span>빠른 진행</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Movie>
+                <span>영화</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags5' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Web Publishing>
+                <span>웹 퍼블리싱</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Historical>
+                <span>역사</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Post-apocalyptic>
+                <span>포스트아포칼립스</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Roguelite>
+                <span>로그라이트</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=JRPG>
+                <span>일본 롤플레잉</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Romance>
+                <span>로맨스</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Party-Based RPG>
+                <span>파티 기반 RPG</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Logic>
+                <span>논리</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Drama>
+                <span>드라마</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dating Sim>
+                <span>연애 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Walking Simulator>
+                <span>걷는 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Base Building>
+                <span>기지 건설</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Stealth>
+                <span>잠입</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=3D Platformer>
+                <span>3D 플랫폼 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Short>
+                <span>짧은 영상</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Choose Your Own Adventure>
+                <span>자신이 선택하는 모험</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Surreal>
+                <span>초현실적</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Animation & Modeling>
+                <span>애니메이션과 모델링</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Turn-Based Tactics>
+                <span>턴제 전술</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Software>
+                <span>소프트웨어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Beautiful>
+                <span>아름다운</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Interactive Fiction>
+                <span>쌍방향 소설</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dungeon Crawler>
+                <span>던전 크롤러</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Bullet Hell>
+                <span>탄막 슈팅</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags6' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Experimental>
+                <span>실험적</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Narration>
+                <span>내레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hidden Object>
+                <span>숨겨진 과제</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Military>
+                <span>군사</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Score Attack>
+                <span>스코어 어택</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=RTS>
+                <span>실시간 전략</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Third-Person Shooter>
+                <span>3인칭 슈터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Fighting>
+                <span>파이터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Team-Based>
+                <span>팀 기반</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Isometric>
+                <span>등각</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cyberpunk>
+                <span>사이버펑크</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Robots>
+                <span>로봇</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=1990's>
+                <span>1990년대</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Top-Down Shooter>
+                <span>탑다운 슈터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Music>
+                <span>음악</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dark Humor>
+                <span>블랙 유머</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Audio Production>
+                <span>오디오 프로덕션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=RPGMaker>
+                <span>RPG 제작</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Driving>
+                <span>운전</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=4 Player Local>
+                <span>4명 로컬 플레이</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Text-Based>
+                <span>텍스트 기반</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Aliens>
+                <span>외계인</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hentai>
+                <span>헨타이</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=2.5D>
+                <span>2.5D</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags7' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Emotional>
+                <span>감정적인</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Economy>
+                <span>경제</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Abstract>
+                <span>추상적</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Nature>
+                <span>자연</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=1980s>
+                <span>1980년대</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Immersive Sim>
+                <span>몰입형 시뮬레이션</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Card Game>
+                <span>카드게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Competitive>
+                <span>경쟁</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Flight>
+                <span>비행</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Perma Death>
+                <span>퍼마 데쓰</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Video Production>
+                <span>비디오 프로덕션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cinematic>
+                <span>시네마틱</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Conversation>
+                <span>대화</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Moddable>
+                <span>모드 가능</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=LGBTQ+>
+                <span>LGBTQ+</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Soundtrack>
+                <span>사운드트랙</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Investigation>
+                <span>수사</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Action Roguelike>
+                <span>액션 로그라이크</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tower Defense>
+                <span>타워디펜스</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Inventory Management>
+                <span>인벤토리 테트리스</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Board Game>
+                <span>보드게임</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tutorial>
+                <span>튜토리얼</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Arena Shooter>
+                <span>아레나 슈터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Detective>
+                <span>수사관</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags8' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=City Builder>
+                <span>도시 건설</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Psychological>
+                <span>심리적</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Thriller>
+                <span>스릴러</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Destruction>
+                <span>파괴</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Beat 'em up>
+                <span>비뎀업</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Nonlinear>
+                <span>비선형</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Real Time Tactics>
+                <span>실시간 전술</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Strategy RPG>
+                <span>전략 롤플레잉</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Demons>
+                <span>악령</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Character Action Game>
+                <span>캐릭터 액션 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Modern>
+                <span>현대</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=NSFW>
+                <span>청소년 이용불가</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Loot>
+                <span>약탈</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tabletop>
+                <span>테이블탑</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Metroidvania>
+                <span>메트로배니아</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Artificial Intelligence>
+                <span>인공 지능</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Time Management>
+                <span>시간 관리</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Psychedelic>
+                <span>사이키델릭</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dystopian>
+                <span>반이상향</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Level Editor>
+                <span>레벨 에디터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Life Sim>
+                <span>생활 시뮬레이션</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Clicker>
+                <span>클리커</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Alternate History>
+                <span>대체 역사</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tactical RPG>
+                <span>전략 RPG</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags9' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Lore-Rich>
+                <span>내용 깊은</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Wargame>
+                <span>전쟁 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Game Development>
+                <span>게임 개발</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=MMORPG>
+                <span>MMORPG</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=World War II>
+                <span>제2차 세계대전</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Supernatural>
+                <span>초자연적</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Addictive>
+                <span>중독성</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Precision Platformer>
+                <span>정밀 플랫폼 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Crime>
+                <span>범죄</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Comic Book>
+                <span>만화책</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dark Comedy>
+                <span>블랙 코미디</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Software Training>
+                <span>소프트웨어 교육</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Parkour>
+                <span>파쿠르</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Twin Stick Shooter>
+                <span>트윈 스틱 슈터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Blood>
+                <span>유혈</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Automobile Sim>
+                <span>자동차 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Grand Strategy>
+                <span>대전략</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=2D Fighter>
+                <span>2D 격투</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Co-op Campaign>
+                <span>협동 캠페인</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Souls-like>
+                <span>소울 스타일</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mythology>
+                <span>신화</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Science>
+                <span>과학</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Runner>
+                <span>러너</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Philosophical>
+                <span>철학적</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags10' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=CRPG>
+                <span>CRPG</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Grid-Based Movement>
+                <span>그리드 기반 움직임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Illuminati>
+                <span>일루미나티</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Split Screen>
+                <span>분할 화면</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Open World Survival Craft>
+                <span>오픈 월드 생존 제작</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Space Sim>
+                <span>우주 시뮬레이션</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Lovecraftian>
+                <span>러브크래프트</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Rhythm>
+                <span>리듬</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Class-Based>
+                <span>클래스 기반</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Swordplay>
+                <span>칼 싸움</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Gun Customization>
+                <span>총 커스터마이즈</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Battle Royale>
+                <span>배틀 로얄</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Episodic>
+                <span>에피소드</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Real-Time>
+                <span>실시간</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Epic>
+                <span>서사</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=eSports>
+                <span>e스포츠</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Match 3>
+                <span>매치 3</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=3D Vision>
+                <span>3D 비전</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cult Classic>
+                <span>컬트 클래식</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dragons>
+                <span>용</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mouse only>
+                <span>마우스만 사용</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Parody>
+                <span>패러디</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Noir>
+                <span>누아르</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=6DOF>
+                <span>6DOF</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags11' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Vehicular Combat>
+                <span>차량 전투</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Satire>
+                <span>풍자</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Photo Editing>
+                <span>사진 편집</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=America>
+                <span>아메리카</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Deckbuilding>
+                <span>덱빌딩</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Steampunk>
+                <span>스팀펑크</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Voxel>
+                <span>복셀</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Political>
+                <span>정치적인</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cats>
+                <span>고양이</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Bullet Time>
+                <span>블렛타임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Collectathon>
+                <span>Collectathon</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Trading>
+                <span>거래</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Conspiracy>
+                <span>음모</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Card Battler>
+                <span>카드 배틀</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Capitalism>
+                <span>자본주의</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hunting>
+                <span>사냥</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mechs>
+                <span>매크</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mining>
+                <span>마이닝</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Time Manipulation>
+                <span>시간 조종</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=MOBA>
+                <span>MOBA</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tanks>
+                <span>탱크</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=3D Fighter>
+                <span>3D 격투</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Colony Sim>
+                <span>식민지 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Remake>
+                <span>리메이크</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags12' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Gothic>
+                <span>고딕</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Idler>
+                <span>아이들러</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Politics>
+                <span>정치적</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hacking>
+                <span>해킹</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Ninja>
+                <span>닌자</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Pirates>
+                <span>해적</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Time Travel>
+                <span>시간여행</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Underground>
+                <span>지하</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=4X>
+                <span>4X</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Otome>
+                <span>오토메</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Agriculture>
+                <span>농업</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mystery Dungeon>
+                <span>미스터리 던전</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Real-Time with Pause>
+                <span>일시 정지 포함된 실시간</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hex Grid>
+                <span>육각형 그리드</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cold War>
+                <span>냉전</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Word Game>
+                <span>낱말 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dynamic Narration>
+                <span>다이내믹 내레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=God Game>
+                <span>신 게임</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Quick-Time Events>
+                <span>퀵타임 이벤트</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Martial Arts>
+                <span>무술</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Automation>
+                <span>자동화</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Farming Sim>
+                <span>농업 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Kickstarter>
+                <span>킥스타터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dog>
+                <span>개</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags13' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Superhero>
+                <span>슈퍼 히어로</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=FMV>
+                <span>FMV</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Spectacle fighter>
+                <span>스펙타클 파이터</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Trains>
+                <span>기차</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hero Shooter>
+                <span>히어로 슈터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Fishing>
+                <span>낚시</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dinosaurs>
+                <span>공룡</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Combat Racing>
+                <span>전투 레이싱</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Western>
+                <span>웨스턴</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Assassin>
+                <span>암살</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Trading Card Game>
+                <span>트레이딩 카드 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Asynchronous Multiplayer>
+                <span>비동기 멀티플레이어</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Naval>
+                <span>해군</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=GameMaker>
+                <span>게임메이커</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Programming>
+                <span>프로그래밍</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Experience>
+                <span>체험</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Underwater>
+                <span>수중</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Touch-Friendly>
+                <span>터치에 친화적인</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Solitaire>
+                <span>솔리테어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Immersive>
+                <span>몰입형</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Heist>
+                <span>강도</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mod>
+                <span>모드</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Minigames>
+                <span>미니게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Looter Shooter>
+                <span>약탈 슈팅</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags14' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Vampire>
+                <span>뱀파이어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Archery>
+                <span>양궁</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Documentary>
+                <span>다큐멘터리</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Dungeons & Dragons>
+                <span>던전 앤 드래곤</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Diplomacy>
+                <span>외교적</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Party>
+                <span>파티</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Political Sim>
+                <span>정치 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Creature Collector>
+                <span>생명체 수집가</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Faith>
+                <span>신념</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Narrative>
+                <span>내러티브</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sokoban>
+                <span>소코반</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sequel>
+                <span>속편</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Naval Combat>
+                <span>해상 전투</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Party Game>
+                <span>파티 게임</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Games Workshop>
+                <span>게임 워크 샵</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Snow>
+                <span>눈</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Foreign>
+                <span>외국</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Transportation>
+                <span>교통 수단</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sailing>
+                <span>항해</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Music-Based Procedural Generation>
+                <span>음악 기반으로 된 절차적인 작곡</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Time Attack>
+                <span>시간 공격</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Villain Protagonist>
+                <span>악당 주인공</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Gaming>
+                <span>게이밍</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Sniper>
+                <span>저격수</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags15' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Football>
+                <span>미식축구</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=World War I>
+                <span>제1차 세계 대전</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Soccer>
+                <span>축구</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Crowdfunded>
+                <span>크라우드펀딩</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=On-Rails Shooter>
+                <span>레일에 달린 슈터</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Silent Protagonist>
+                <span>말을 안 하는 주인공</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Horses>
+                <span>말</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Offroad>
+                <span>오프로드</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Typing>
+                <span>타이핑</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Auto Battler>
+                <span>오토 배틀러</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mars>
+                <span>화성</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Transhumanism>
+                <span>트랜스휴머니즘</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Gambling>
+                <span>도박</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=360 Video>
+                <span>360 비디오</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cooking>
+                <span>요리</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Werewolves>
+                <span>늑대 인간</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Chess>
+                <span>체스</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=TrackIR>
+                <span>TrackIR</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Trivia>
+                <span>상식 퀴즈</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Boxing>
+                <span>복싱</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Pinball>
+                <span>핀볼</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Farming>
+                <span>파밍</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Unforgiving>
+                <span>고난이도</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=LEGO>
+                <span>레고</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags16' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Nostalgia>
+                <span>추억 소환</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Traditional Roguelike>
+                <span>정통 로그라이크</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Based On A Novel>
+                <span>소설 기반</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Rome>
+                <span>로마</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Roguelike Deckbuilder>
+                <span>로그라이크 덱 빌딩</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Motorbike>
+                <span>오토바이</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Warhammer 40K>
+                <span>워해머 40K</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Golf>
+                <span>골프</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Ambient>
+                <span>분위기</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Jet>
+                <span>제트</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Spaceships>
+                <span>우주선</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Action RTS>
+                <span>액션 RTS</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Electronic Music>
+                <span>전자 음악</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Outbreak Sim>
+                <span>아웃브레이크 시뮬레이션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Medical Sim>
+                <span>의학 시뮬레이션</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Asymmetric VR>
+                <span>비대칭 VR</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Bikes>
+                <span>바이크</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Basketball>
+                <span>농구</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Submarine>
+                <span>잠수함</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Spelling>
+                <span>맞춤법</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Roguevania>
+                <span>로그바니아</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Social Deduction>
+                <span>소셜 디덕션</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Intentionally Awkward Controls>
+                <span>의도적으로 불편한 컨트롤</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Mini Golf>
+                <span>미니 골프</span>
+              </label>
+          </div>
+          </div>
+        <div id='tags17' style='display: none;'>
+          <div>
+            <p class='title2'>태그</p>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Pool>
+                <span>당구</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Steam Machine>
+                <span>Steam Machine</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Benchmark>
+                <span>벤치마크</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hardware>
+                <span>하드웨어</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Wrestling>
+                <span>레슬링</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Instrumental Music>
+                <span>인스트루멘탈 음악</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Tennis>
+                <span>테니스</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Baseball>
+                <span>야구</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Skateboarding>
+                <span>스케이트보딩</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Lemmings>
+                <span>레밍</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Hockey>
+                <span>하키</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Feature Film>
+                <span>장편 영화</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Bowling>
+                <span>볼링</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Voice Control>
+                <span>보이스 컨트롤</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Skating>
+                <span>스케이팅</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Cycling>
+                <span>사이클링</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Electronic>
+                <span>일렉트로닉</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Motocross>
+                <span>모터크로스</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Rock Music>
+                <span>락 음악</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=ATV>
+                <span>ATV</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Well-Written>
+                <span>훌륭한 각본</span>
+              </label>
+          </div>
+          <br>
+          <div>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=8-bit Music>
+                <span>8비트 음악</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Skiing>
+                <span>스키</span>
+              </label>
+              <label class='box-radio-input r2'>
+                <input type='checkbox' name='rd5[]' value=Snowboarding>
+                <span>스노우보딩</span>
+              </label>
+          </div>
+          </div>
+        
+        <div id='tags18' style="display: none;">
+          <!-- # 태그18 -->
+          <div>
+            <p class="title2">태그</p><!-- 국 -->
+            <label class="box-radio-input r2">
+              <input type="checkbox" name="rd5[]" value="BMX">
+              <span style="width: 50%;">BMX</span>
+            </label>
+            <label class="box-radio-input r2">
+              <input type="checkbox" name="rd5[]" value="Reboot">
+              <span style="width: 50%;">리부트</span>
+            </label>
+          </div>
+        </div>
+        <div id="LR">
+          <label class="box-LR-input">
+            <input type="button" onclick="leftButton();" name="1" value="text">
+            <span style="width: 25%">◀</span>
+          </label>
+          <label class="box-input">
+            <input type="button" name="1">
+            <span style="width: 50%">1 - &lt; 1 &gt; - 18</span>
+          </label>
+          <label class="box-LR-input">
+            <input type="button" onclick="rightButton();" name="2" value="text">
+            <span style="width: 25%">▶</span>
+          </label>
+        </div>
+        <label class="box-radio-input">
+          <input type="button" onclick="button();" name="next" value="next">
+          <span id="b5">NEXT</span>
+        </label>
+      </fieldset>
+      <fieldset style="display: none;" id="f6" class="r3">
+        <div>
+          <p class="title2">가격</p><!-- 국 -->
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd6" value="text">
+            <span>1</span>
+          </label>
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd6" value="text">
+            <span>2</span>
+          </label>
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd6" value="text">
+            <span>3</span>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd6" value="text">
+            <span>4</span>
+          </label>
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd6" value="text">
+            <span>5</span>
+          </label>
+          <label class="box-radio-input r2">
+            <input type="radio" name="rd6" value="text">
+            <span>6</span>
+          </label>
+        </div>
+        <label class="box-radio-input">
+          <input type="button" onclick="lastButton();" value="post">
+          <span id="b6">FIND</span>
+        </label>
+      </fieldset>
+    </form>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    let cnt = 1;
+    let cnt2 = 0;
+    let ch = 0;
+    let lr = 1;
+    function button() {
+      var obj_length = document.querySelectorAll('[name ^= "rd' + cnt + '"]').length;
+
+      for (var i = 0; i < obj_length; i++) {
+        if (document.querySelectorAll('[name ^= "rd' + cnt + '"]')[i].checked == true) {
+          document.querySelector('div[id="top"]').innerHTML +=
+            "<span>" + document.querySelectorAll('[name ^= "rd' + cnt + '"]')[i].value + "</span>";
+          ch++
+        }
+      }
+
+      if (ch > 0) {//미선택으로 넘김
+        document.querySelector('[id = "f' + cnt + '"]').style.display = "none";
+        document.querySelector('[id = "f' + (cnt + 1) + '"]').style.display = "block";
+        cnt++;
+      }
+      else {
+        document.querySelector('.box-radio-input input[type="button"] + span[id="b' + cnt + '"]')
+          .setAttribute('class', 'red');
+        setTimeout(function () {
+          document.querySelector('.box-radio-input input[type="button"] + span[id="b' + cnt + '"]')
+            .setAttribute('class', 'nomal')
+        }, 500);
+      }
+      cnt2 = 0;
+      ch = 0;
+    }
+
+    function lastButton() {
+      let form = document.form;
+      var obj_length = document.querySelectorAll('[name ^= "rd' + cnt + '"]').length;
+
+      for (var i = 0; i < obj_length; i++) {
+        if (document.querySelectorAll('[name ^= "rd' + cnt + '"]')[i].checked == true) {
+          document.querySelector('div[id="top"]').innerHTML +=
+            "<span>" + document.querySelectorAll('[name ^= "rd' + cnt + '"]')[i].value + "</span>";
+          ch++
+        }
+      }
+      if (ch == 0) {
+        document.querySelector('.box-radio-input input[type="button"] + span[id="b' + cnt + '"]')
+          .setAttribute('class', 'red');
+        setTimeout(function () {
+          document.querySelector('.box-radio-input input[type="button"] + span[id="b' + cnt + '"]')
+            .setAttribute('class', 'nomal')
+        }, 500);
+      }
+      else {
+        document.querySelector('[id = "f' + cnt + '"]').style.display = "none";
+      }
+      cnt2 = 0;
+      ch = 0;
+      form.submit();
+    }
+    function leftButton() {
+      if (lr != 1) {
+        document.querySelector('div[id = "tags' + lr + '"]').style.display = "none";
+        document.querySelector('div[id = "tags' + (lr - 1) + '"]').style.display = "block";
+        document.querySelector('label[class="box-input"] span').innerHTML = '1 - < ' + (--lr) + " > - 18"
+      } else {
+        alert('첫 페이지입니다.')
+      }
+    }
+    function rightButton() {
+      if (lr != 18) {
+        document.querySelector('div[id = "tags' + lr + '"]').style.display = "none";
+        document.querySelector('div[id = "tags' + (lr + 1) + '"]').style.display = "block";
+        document.querySelector('label[class="box-input"] span').innerHTML = '1 - < ' + (++lr) + " > - 18"
+      } else {
+        alert('마지막 페이지입니다.')
+      }
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+*{ 
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "나눔고딕";
+}
+a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* 제목부분 */
+header{
+  background-color: rgb(238, 178, 67);
+  width: 100%;
+  min-width: 800px;
+  height: 100px;
+}
+header img{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 85px;
+  height: 85px;
+  float: left;
+}
+.box{
+  background-color: rgb(214, 152, 37);
+  width: 100%;
+  min-width: 800px;
+  height: 30px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  line-height: 30px;
+  padding-top: 2px;
+  padding-left: 10px;
+}
+/* 헤더 제목 */
+.title{ /*헤더 타이틀*/
+  margin-top: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  width: 600px;
+  float: left;
+}
+/* 태그부분 */
+div[id = "top"]{
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+}
+/* 태그내용 */
+div[id = "top"] span{
+  display: inline-block;
+  background:rgb(182, 182, 182);
+  /* border:2px solid #ebebeb;   */
+  text-align:center;
+  height:30px;
+  line-height:30px;
+  font-weight:800;
+  font-size: 20px;
+  cursor:pointer;
+  padding: 0 15px;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  color:rgb(252, 252, 252);
+  border-radius: 30px;
+}
+/* 내용부분 */
+#main{
+  margin: 0 auto;
+  width: 1000px;
+  min-height: 600px;
+  text-align: center;
+  background-color: rgb(238, 225, 208);
+  margin-bottom: 100px;
+}
+/*선택지 타이틀*/
+.title2{/*선택지 타이틀*/
+  background-color: rgb(238, 178, 67);
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 7px;
+  font-weight: 900;
+}
+/* 선택지 */
+fieldset{
+  font-size: 0;/*선택지 사이 여백 없애기 위함*/
+  box-shadow: 0px 0px 15px 1px rgb(145, 145, 145);
+  border-radius: 15px;
+}
+/* 컴포넌트(숨기기) */
+.box-radio-input input[type="radio"],.box-radio-input input[type="checkbox"],.box-radio-input input[type="button"]{
+  display:none;
+}
+.box-input input[type="button"],.box-LR-input input[type="button"]{
+  display:none;
+}
+/* 컴포넌트 기본 디자인 - 라디오, 체크박스*/
+.box-radio-input input[type="radio"] + span,.box-radio-input input[type="checkbox"] + span{
+  display: inline-block;
+  background:rgb(236, 236, 236);
+  /* border:2px solid #ebebeb;   */
+  text-align:center;
+  height:40px;
+  line-height:40px;
+  font-weight:800;
+  font-size: 23px;
+  cursor:pointer;
+  color:rgb(109, 109, 109);
+  transition:0.2s;
+  overflow: auto;
+}
+/* 컴포넌트 기본 디자인 - 버튼*/
+.box-radio-input input[type="button"] + span{
+  display: inline-block;
+  background:rgb(238, 178, 67);
+  /* border:2px solid #ebebeb;   */
+  text-align:center;
+  height:40px;
+  line-height:40px;
+  font-weight:800;
+  font-size: 23px;
+  cursor:pointer;
+  color:rgb(255, 255, 255);
+  transition:0.2s;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/* 컴포넌트 기본 디자인 - 버튼좌우텍스트*/
+.box-input input[type="button"] + span{
+  display: inline-block;
+  background:rgb(235, 213, 185);
+  /* border:2px solid #ebebeb;   */
+  text-align:center;
+  height:25px;
+  line-height:25px;
+  font-weight:800;
+  font-size: 20px;
+  cursor:pointer;
+  color:rgb(112, 112, 112);
+  transition:0.2s;
+  width: 100%;
+}
+/* 컴포넌트 기본 디자인 - 버튼좌우*/
+.box-LR-input input[type="button"] + span{
+  display: inline-block;
+  background:rgb(233, 204, 141);
+  /* border:2px solid #ebebeb;   */
+  text-align:center;
+  height:25px;
+  line-height:25px;
+  font-weight:800;
+  font-size: 20px;
+  cursor:pointer;
+  color:rgb(255, 255, 255);
+  transition:0.2s;
+  width: 100%;
+}
+/* 컴포넌트 기본 디자인 - 버튼 + 미선택시*/
+.box-radio-input input[type="button"] + span[class="red"]{
+  display: inline-block;
+  background:rgb(221, 99, 99);
+  /* border:2px solid #ebebeb;   */
+  text-align:center;
+  height:40px;
+  line-height:40px;
+  font-weight:800;
+  font-size: 23px;
+  cursor:pointer;
+  color:rgb(255, 255, 255);
+  transition:0.2s;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/* 컴포턴트 마우스 올렸을 때 */
+.box-radio-input input[type="radio"] + span:hover,.box-radio-input input[type="checkbox"] + span:hover{
+  background:rgb(241, 223, 189);
+}
+/* 컴포턴트 마우스 올렸을 때 */
+.box-radio-input input[type="button"] + span:hover{
+  background:rgb(111, 211, 181);
+}
+.box-LR-input input[type="button"] + span:hover{
+  color:rgb(133, 133, 133);
+}
+/* 컴포턴트 마우스 올렸을 때 - 미선택시*/
+.box-radio-input input[type="button"] + span[class="red"]:hover{
+  background:rgb(221, 99, 99);
+}
+/* 컴포턴트 클릭시*/
+.box-radio-input input[type="radio"]:checked + span,.box-radio-input input[type="checkbox"]:checked + span{
+  /* border:2px solid rgb(145, 144, 243); */
+  background:rgb(235, 196, 120);
+  color:#fff;
+}
+/* 선택지 라운드 */
+fieldset p{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+/* 선택시 비율 */
+fieldset.r1 span{
+  width: 100%;
+}
+fieldset.r2 span{
+  width: 50%;
+}
+fieldset.r3 span{
+  width: 33.3%;
+}
+fieldset.r4 span{
+  width: 25%;
+}
+fieldset.r5 span{
+  width: 20%;
+}
+/* 밑부분 */
+footer{
+  background-color: rgb(238, 178, 67);
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin-top: 200px;
+}
+/* 주의 사항
+  fieldset div:last-of-type span:first-of-type {}
+  으로 하니까 각각의 라벨의 모든 span에 적용됨
+  그렇다는 것은 각 방마다로 인식 하는 듯
+*/
+/* fieldset div:last-of-type label:first-of-type span{
+  border-bottom-left-radius: 15px;
+}
+
+fieldset div:last-of-type label:last-of-type span{
+  border-bottom-right-radius: 15px;
+} */
